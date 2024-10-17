@@ -20,7 +20,7 @@ class Course(Base):
     return self.title
 
 class Review(Base):
-  course = models.ForeignKey(Course, related_name='assessments', on_delete=models.CASCADE)
+  course = models.ForeignKey(Course, related_name='reviews', on_delete=models.CASCADE)
   name = models.CharField(max_length=255)
   comment = models.TextField(blank=True, default='')
   email = models.EmailField()
